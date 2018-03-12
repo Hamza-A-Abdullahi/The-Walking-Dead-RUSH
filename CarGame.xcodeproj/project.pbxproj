@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA0D561420444E6000B33F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D561320444E6000B33F41 /* AppDelegate.swift */; };
+		DA0D561620444E6000B33F41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D561520444E6000B33F41 /* ViewController.swift */; };
+		DA0D561920444E6000B33F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0D561720444E6000B33F41 /* Main.storyboard */; };
+		DA0D561B20444E6000B33F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0D561A20444E6000B33F41 /* Assets.xcassets */; };
+		DA0D561E20444E6000B33F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0D561C20444E6000B33F41 /* LaunchScreen.storyboard */; };
+		DA0D562920444E6000B33F41 /* CarGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D562820444E6000B33F41 /* CarGameTests.swift */; };
+		DA0D563420444E6000B33F41 /* CarGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D563320444E6000B33F41 /* CarGameUITests.swift */; };
+		DA0D5642204450DF00B33F41 /* road20.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5641204450DF00B33F41 /* road20.png */; };
+		DA0D56442044532D00B33F41 /* car0.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D56432044532D00B33F41 /* car0.png */; };
+		DA0D56462044540B00B33F41 /* DraggingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D56452044540B00B33F41 /* DraggingImageView.swift */; };
+		DA0D565A204461D800B33F41 /* road11.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5647204461D600B33F41 /* road11.png */; };
+		DA0D565B204461D800B33F41 /* road6.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5648204461D600B33F41 /* road6.png */; };
+		DA0D565C204461D800B33F41 /* road12.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5649204461D600B33F41 /* road12.png */; };
+		DA0D565D204461D800B33F41 /* road18.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D564A204461D600B33F41 /* road18.png */; };
+		DA0D565E204461D800B33F41 /* road13.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D564B204461D600B33F41 /* road13.png */; };
+		DA0D565F204461D800B33F41 /* road19.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D564C204461D600B33F41 /* road19.png */; };
+		DA0D5660204461D800B33F41 /* road1.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D564D204461D600B33F41 /* road1.png */; };
+		DA0D5661204461D800B33F41 /* road10.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D564E204461D600B33F41 /* road10.png */; };
+		DA0D5662204461D800B33F41 /* road7.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D564F204461D600B33F41 /* road7.png */; };
+		DA0D5663204461D800B33F41 /* road4.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5650204461D700B33F41 /* road4.png */; };
+		DA0D5664204461D800B33F41 /* road8.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5651204461D700B33F41 /* road8.png */; };
+		DA0D5665204461D800B33F41 /* road5.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5652204461D700B33F41 /* road5.png */; };
+		DA0D5666204461D800B33F41 /* road17.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5653204461D700B33F41 /* road17.png */; };
+		DA0D5667204461D800B33F41 /* road2.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5654204461D700B33F41 /* road2.png */; };
+		DA0D5668204461D800B33F41 /* road9.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5655204461D700B33F41 /* road9.png */; };
+		DA0D5669204461D800B33F41 /* road14.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5656204461D700B33F41 /* road14.png */; };
+		DA0D566A204461D800B33F41 /* road15.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5657204461D700B33F41 /* road15.png */; };
+		DA0D566B204461D800B33F41 /* road16.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5658204461D700B33F41 /* road16.png */; };
+		DA0D566C204461D800B33F41 /* road3.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5659204461D800B33F41 /* road3.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA0D562520444E6000B33F41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA0D560820444E6000B33F41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA0D560F20444E6000B33F41;
+			remoteInfo = CarGame;
+		};
+		DA0D563020444E6000B33F41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA0D560820444E6000B33F41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA0D560F20444E6000B33F41;
+			remoteInfo = CarGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA0D561020444E6000B33F41 /* CarGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0D561320444E6000B33F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA0D561520444E6000B33F41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA0D561820444E6000B33F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA0D561A20444E6000B33F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA0D561D20444E6000B33F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA0D561F20444E6000B33F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0D562420444E6000B33F41 /* CarGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0D562820444E6000B33F41 /* CarGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGameTests.swift; sourceTree = "<group>"; };
+		DA0D562A20444E6000B33F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0D562F20444E6000B33F41 /* CarGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0D563320444E6000B33F41 /* CarGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarGameUITests.swift; sourceTree = "<group>"; };
+		DA0D563520444E6000B33F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0D5641204450DF00B33F41 /* road20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road20.png; path = ../../images/road20.png; sourceTree = "<group>"; };
+		DA0D56432044532D00B33F41 /* car0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car0.png; path = ../../images/car0.png; sourceTree = "<group>"; };
+		DA0D56452044540B00B33F41 /* DraggingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggingImageView.swift; sourceTree = SOURCE_ROOT; };
+		DA0D5647204461D600B33F41 /* road11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road11.png; path = ../../images/road11.png; sourceTree = "<group>"; };
+		DA0D5648204461D600B33F41 /* road6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road6.png; path = ../../images/road6.png; sourceTree = "<group>"; };
+		DA0D5649204461D600B33F41 /* road12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road12.png; path = ../../images/road12.png; sourceTree = "<group>"; };
+		DA0D564A204461D600B33F41 /* road18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road18.png; path = ../../images/road18.png; sourceTree = "<group>"; };
+		DA0D564B204461D600B33F41 /* road13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road13.png; path = ../../images/road13.png; sourceTree = "<group>"; };
+		DA0D564C204461D600B33F41 /* road19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road19.png; path = ../../images/road19.png; sourceTree = "<group>"; };
+		DA0D564D204461D600B33F41 /* road1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road1.png; path = ../../images/road1.png; sourceTree = "<group>"; };
+		DA0D564E204461D600B33F41 /* road10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road10.png; path = ../../images/road10.png; sourceTree = "<group>"; };
+		DA0D564F204461D600B33F41 /* road7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road7.png; path = ../../images/road7.png; sourceTree = "<group>"; };
+		DA0D5650204461D700B33F41 /* road4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road4.png; path = ../../images/road4.png; sourceTree = "<group>"; };
+		DA0D5651204461D700B33F41 /* road8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road8.png; path = ../../images/road8.png; sourceTree = "<group>"; };
+		DA0D5652204461D700B33F41 /* road5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road5.png; path = ../../images/road5.png; sourceTree = "<group>"; };
+		DA0D5653204461D700B33F41 /* road17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road17.png; path = ../../images/road17.png; sourceTree = "<group>"; };
+		DA0D5654204461D700B33F41 /* road2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road2.png; path = ../../images/road2.png; sourceTree = "<group>"; };
+		DA0D5655204461D700B33F41 /* road9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road9.png; path = ../../images/road9.png; sourceTree = "<group>"; };
+		DA0D5656204461D700B33F41 /* road14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road14.png; path = ../../images/road14.png; sourceTree = "<group>"; };
+		DA0D5657204461D700B33F41 /* road15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road15.png; path = ../../images/road15.png; sourceTree = "<group>"; };
+		DA0D5658204461D700B33F41 /* road16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road16.png; path = ../../images/road16.png; sourceTree = "<group>"; };
+		DA0D5659204461D800B33F41 /* road3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road3.png; path = ../../images/road3.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA0D560D20444E6000B33F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA0D562120444E6000B33F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA0D562C20444E6000B33F41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA0D560720444E6000B33F41 = {
+			isa = PBXGroup;
+			children = (
+				DA0D561220444E6000B33F41 /* CarGame */,
+				DA0D562720444E6000B33F41 /* CarGameTests */,
+				DA0D563220444E6000B33F41 /* CarGameUITests */,
+				DA0D561120444E6000B33F41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA0D561120444E6000B33F41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA0D561020444E6000B33F41 /* CarGame.app */,
+				DA0D562420444E6000B33F41 /* CarGameTests.xctest */,
+				DA0D562F20444E6000B33F41 /* CarGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA0D561220444E6000B33F41 /* CarGame */ = {
+			isa = PBXGroup;
+			children = (
+				DA0D561320444E6000B33F41 /* AppDelegate.swift */,
+				DA0D561520444E6000B33F41 /* ViewController.swift */,
+				DA0D561720444E6000B33F41 /* Main.storyboard */,
+				DA0D56452044540B00B33F41 /* DraggingImageView.swift */,
+				DA0D564D204461D600B33F41 /* road1.png */,
+				DA0D5654204461D700B33F41 /* road2.png */,
+				DA0D5659204461D800B33F41 /* road3.png */,
+				DA0D5650204461D700B33F41 /* road4.png */,
+				DA0D5652204461D700B33F41 /* road5.png */,
+				DA0D5648204461D600B33F41 /* road6.png */,
+				DA0D564F204461D600B33F41 /* road7.png */,
+				DA0D5651204461D700B33F41 /* road8.png */,
+				DA0D5655204461D700B33F41 /* road9.png */,
+				DA0D564E204461D600B33F41 /* road10.png */,
+				DA0D5647204461D600B33F41 /* road11.png */,
+				DA0D5649204461D600B33F41 /* road12.png */,
+				DA0D564B204461D600B33F41 /* road13.png */,
+				DA0D5656204461D700B33F41 /* road14.png */,
+				DA0D5657204461D700B33F41 /* road15.png */,
+				DA0D5658204461D700B33F41 /* road16.png */,
+				DA0D5653204461D700B33F41 /* road17.png */,
+				DA0D564A204461D600B33F41 /* road18.png */,
+				DA0D564C204461D600B33F41 /* road19.png */,
+				DA0D56432044532D00B33F41 /* car0.png */,
+				DA0D5641204450DF00B33F41 /* road20.png */,
+				DA0D561A20444E6000B33F41 /* Assets.xcassets */,
+				DA0D561C20444E6000B33F41 /* LaunchScreen.storyboard */,
+				DA0D561F20444E6000B33F41 /* Info.plist */,
+			);
+			path = CarGame;
+			sourceTree = "<group>";
+		};
+		DA0D562720444E6000B33F41 /* CarGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA0D562820444E6000B33F41 /* CarGameTests.swift */,
+				DA0D562A20444E6000B33F41 /* Info.plist */,
+			);
+			path = CarGameTests;
+			sourceTree = "<group>";
+		};
+		DA0D563220444E6000B33F41 /* CarGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA0D563320444E6000B33F41 /* CarGameUITests.swift */,
+				DA0D563520444E6000B33F41 /* Info.plist */,
+			);
+			path = CarGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA0D560F20444E6000B33F41 /* CarGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA0D563820444E6000B33F41 /* Build configuration list for PBXNativeTarget "CarGame" */;
+			buildPhases = (
+				DA0D560C20444E6000B33F41 /* Sources */,
+				DA0D560D20444E6000B33F41 /* Frameworks */,
+				DA0D560E20444E6000B33F41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarGame;
+			productName = CarGame;
+			productReference = DA0D561020444E6000B33F41 /* CarGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA0D562320444E6000B33F41 /* CarGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA0D563B20444E6000B33F41 /* Build configuration list for PBXNativeTarget "CarGameTests" */;
+			buildPhases = (
+				DA0D562020444E6000B33F41 /* Sources */,
+				DA0D562120444E6000B33F41 /* Frameworks */,
+				DA0D562220444E6000B33F41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA0D562620444E6000B33F41 /* PBXTargetDependency */,
+			);
+			name = CarGameTests;
+			productName = CarGameTests;
+			productReference = DA0D562420444E6000B33F41 /* CarGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DA0D562E20444E6000B33F41 /* CarGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA0D563E20444E6000B33F41 /* Build configuration list for PBXNativeTarget "CarGameUITests" */;
+			buildPhases = (
+				DA0D562B20444E6000B33F41 /* Sources */,
+				DA0D562C20444E6000B33F41 /* Frameworks */,
+				DA0D562D20444E6000B33F41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA0D563120444E6000B33F41 /* PBXTargetDependency */,
+			);
+			name = CarGameUITests;
+			productName = CarGameUITests;
+			productReference = DA0D562F20444E6000B33F41 /* CarGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA0D560820444E6000B33F41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Hamza Abdullahi";
+				TargetAttributes = {
+					DA0D560F20444E6000B33F41 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					DA0D562320444E6000B33F41 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DA0D560F20444E6000B33F41;
+					};
+					DA0D562E20444E6000B33F41 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DA0D560F20444E6000B33F41;
+					};
+				};
+			};
+			buildConfigurationList = DA0D560B20444E6000B33F41 /* Build configuration list for PBXProject "CarGame" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA0D560720444E6000B33F41;
+			productRefGroup = DA0D561120444E6000B33F41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA0D560F20444E6000B33F41 /* CarGame */,
+				DA0D562320444E6000B33F41 /* CarGameTests */,
+				DA0D562E20444E6000B33F41 /* CarGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA0D560E20444E6000B33F41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA0D565B204461D800B33F41 /* road6.png in Resources */,
+				DA0D565E204461D800B33F41 /* road13.png in Resources */,
+				DA0D565F204461D800B33F41 /* road19.png in Resources */,
+				DA0D566B204461D800B33F41 /* road16.png in Resources */,
+				DA0D5668204461D800B33F41 /* road9.png in Resources */,
+				DA0D5663204461D800B33F41 /* road4.png in Resources */,
+				DA0D5660204461D800B33F41 /* road1.png in Resources */,
+				DA0D5665204461D800B33F41 /* road5.png in Resources */,
+				DA0D561E20444E6000B33F41 /* LaunchScreen.storyboard in Resources */,
+				DA0D56442044532D00B33F41 /* car0.png in Resources */,
+				DA0D5661204461D800B33F41 /* road10.png in Resources */,
+				DA0D5667204461D800B33F41 /* road2.png in Resources */,
+				DA0D566A204461D800B33F41 /* road15.png in Resources */,
+				DA0D5666204461D800B33F41 /* road17.png in Resources */,
+				DA0D5642204450DF00B33F41 /* road20.png in Resources */,
+				DA0D565A204461D800B33F41 /* road11.png in Resources */,
+				DA0D5664204461D800B33F41 /* road8.png in Resources */,
+				DA0D565D204461D800B33F41 /* road18.png in Resources */,
+				DA0D561B20444E6000B33F41 /* Assets.xcassets in Resources */,
+				DA0D5662204461D800B33F41 /* road7.png in Resources */,
+				DA0D5669204461D800B33F41 /* road14.png in Resources */,
+				DA0D566C204461D800B33F41 /* road3.png in Resources */,
+				DA0D565C204461D800B33F41 /* road12.png in Resources */,
+				DA0D561920444E6000B33F41 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA0D562220444E6000B33F41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA0D562D20444E6000B33F41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA0D560C20444E6000B33F41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA0D561620444E6000B33F41 /* ViewController.swift in Sources */,
+				DA0D561420444E6000B33F41 /* AppDelegate.swift in Sources */,
+				DA0D56462044540B00B33F41 /* DraggingImageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA0D562020444E6000B33F41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA0D562920444E6000B33F41 /* CarGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA0D562B20444E6000B33F41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA0D563420444E6000B33F41 /* CarGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA0D562620444E6000B33F41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA0D560F20444E6000B33F41 /* CarGame */;
+			targetProxy = DA0D562520444E6000B33F41 /* PBXContainerItemProxy */;
+		};
+		DA0D563120444E6000B33F41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA0D560F20444E6000B33F41 /* CarGame */;
+			targetProxy = DA0D563020444E6000B33F41 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA0D561720444E6000B33F41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA0D561820444E6000B33F41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA0D561C20444E6000B33F41 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA0D561D20444E6000B33F41 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA0D563620444E6000B33F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA0D563720444E6000B33F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA0D563920444E6000B33F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29G6A8AMLG;
+				INFOPLIST_FILE = CarGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = simplecargame.CarGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA0D563A20444E6000B33F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 29G6A8AMLG;
+				INFOPLIST_FILE = CarGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = simplecargame.CarGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DA0D563C20444E6000B33F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CarGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = simplecargame.CarGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarGame.app/CarGame";
+			};
+			name = Debug;
+		};
+		DA0D563D20444E6000B33F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CarGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = simplecargame.CarGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarGame.app/CarGame";
+			};
+			name = Release;
+		};
+		DA0D563F20444E6000B33F41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CarGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = simplecargame.CarGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarGame;
+			};
+			name = Debug;
+		};
+		DA0D564020444E6000B33F41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CarGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = simplecargame.CarGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CarGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA0D560B20444E6000B33F41 /* Build configuration list for PBXProject "CarGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA0D563620444E6000B33F41 /* Debug */,
+				DA0D563720444E6000B33F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA0D563820444E6000B33F41 /* Build configuration list for PBXNativeTarget "CarGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA0D563920444E6000B33F41 /* Debug */,
+				DA0D563A20444E6000B33F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA0D563B20444E6000B33F41 /* Build configuration list for PBXNativeTarget "CarGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA0D563C20444E6000B33F41 /* Debug */,
+				DA0D563D20444E6000B33F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA0D563E20444E6000B33F41 /* Build configuration list for PBXNativeTarget "CarGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA0D563F20444E6000B33F41 /* Debug */,
+				DA0D564020444E6000B33F41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA0D560820444E6000B33F41 /* Project object */;
+}
