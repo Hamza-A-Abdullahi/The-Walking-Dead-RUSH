@@ -36,6 +36,12 @@
 		DA0D566A204461D800B33F41 /* road15.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5657204461D700B33F41 /* road15.png */; };
 		DA0D566B204461D800B33F41 /* road16.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5658204461D700B33F41 /* road16.png */; };
 		DA0D566C204461D800B33F41 /* road3.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5659204461D800B33F41 /* road3.png */; };
+		DA843E6120600DC300555178 /* car2.png in Resources */ = {isa = PBXBuildFile; fileRef = DA843E5B20600DC200555178 /* car2.png */; };
+		DA843E6220600DC300555178 /* car6.png in Resources */ = {isa = PBXBuildFile; fileRef = DA843E5C20600DC200555178 /* car6.png */; };
+		DA843E6320600DC300555178 /* car3.png in Resources */ = {isa = PBXBuildFile; fileRef = DA843E5D20600DC200555178 /* car3.png */; };
+		DA843E6420600DC300555178 /* car4.png in Resources */ = {isa = PBXBuildFile; fileRef = DA843E5E20600DC200555178 /* car4.png */; };
+		DA843E6520600DC300555178 /* car1.png in Resources */ = {isa = PBXBuildFile; fileRef = DA843E5F20600DC200555178 /* car1.png */; };
+		DA843E6620600DC300555178 /* car5.png in Resources */ = {isa = PBXBuildFile; fileRef = DA843E6020600DC300555178 /* car5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +97,12 @@
 		DA0D5657204461D700B33F41 /* road15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road15.png; path = ../../images/road15.png; sourceTree = "<group>"; };
 		DA0D5658204461D700B33F41 /* road16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road16.png; path = ../../images/road16.png; sourceTree = "<group>"; };
 		DA0D5659204461D800B33F41 /* road3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = road3.png; path = ../../images/road3.png; sourceTree = "<group>"; };
+		DA843E5B20600DC200555178 /* car2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car2.png; path = ../../images/car2.png; sourceTree = "<group>"; };
+		DA843E5C20600DC200555178 /* car6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car6.png; path = ../../images/car6.png; sourceTree = "<group>"; };
+		DA843E5D20600DC200555178 /* car3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car3.png; path = ../../images/car3.png; sourceTree = "<group>"; };
+		DA843E5E20600DC200555178 /* car4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car4.png; path = ../../images/car4.png; sourceTree = "<group>"; };
+		DA843E5F20600DC200555178 /* car1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car1.png; path = ../../images/car1.png; sourceTree = "<group>"; };
+		DA843E6020600DC300555178 /* car5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = car5.png; path = ../../images/car5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +153,12 @@
 		DA0D561220444E6000B33F41 /* CarGame */ = {
 			isa = PBXGroup;
 			children = (
+				DA843E5F20600DC200555178 /* car1.png */,
+				DA843E5B20600DC200555178 /* car2.png */,
+				DA843E5D20600DC200555178 /* car3.png */,
+				DA843E5E20600DC200555178 /* car4.png */,
+				DA843E6020600DC300555178 /* car5.png */,
+				DA843E5C20600DC200555178 /* car6.png */,
 				DA0D561320444E6000B33F41 /* AppDelegate.swift */,
 				DA0D561520444E6000B33F41 /* ViewController.swift */,
 				DA0D561720444E6000B33F41 /* Main.storyboard */,
@@ -300,9 +318,12 @@
 			files = (
 				DA0D565B204461D800B33F41 /* road6.png in Resources */,
 				DA0D565E204461D800B33F41 /* road13.png in Resources */,
+				DA843E6320600DC300555178 /* car3.png in Resources */,
+				DA843E6520600DC300555178 /* car1.png in Resources */,
 				DA0D565F204461D800B33F41 /* road19.png in Resources */,
 				DA0D566B204461D800B33F41 /* road16.png in Resources */,
 				DA0D5668204461D800B33F41 /* road9.png in Resources */,
+				DA843E6220600DC300555178 /* car6.png in Resources */,
 				DA0D5663204461D800B33F41 /* road4.png in Resources */,
 				DA0D5660204461D800B33F41 /* road1.png in Resources */,
 				DA0D5665204461D800B33F41 /* road5.png in Resources */,
@@ -313,12 +334,15 @@
 				DA0D566A204461D800B33F41 /* road15.png in Resources */,
 				DA0D5666204461D800B33F41 /* road17.png in Resources */,
 				DA0D5642204450DF00B33F41 /* road20.png in Resources */,
+				DA843E6420600DC300555178 /* car4.png in Resources */,
 				DA0D565A204461D800B33F41 /* road11.png in Resources */,
 				DA0D5664204461D800B33F41 /* road8.png in Resources */,
 				DA0D565D204461D800B33F41 /* road18.png in Resources */,
 				DA0D561B20444E6000B33F41 /* Assets.xcassets in Resources */,
 				DA0D5662204461D800B33F41 /* road7.png in Resources */,
 				DA0D5669204461D800B33F41 /* road14.png in Resources */,
+				DA843E6120600DC300555178 /* car2.png in Resources */,
+				DA843E6620600DC300555178 /* car5.png in Resources */,
 				DA0D566C204461D800B33F41 /* road3.png in Resources */,
 				DA0D565C204461D800B33F41 /* road12.png in Resources */,
 				DA0D561920444E6000B33F41 /* Main.storyboard in Resources */,

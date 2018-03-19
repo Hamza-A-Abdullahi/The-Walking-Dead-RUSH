@@ -10,6 +10,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var dynamicAnimator: UIDynamicAnimator!
+    var dynamicItemBehavior: UIDynamicItemBehavior!
     
     
     @IBOutlet weak var moveroadImage: UIImageView!
@@ -43,6 +45,26 @@ class ViewController: UIViewController {
         
         moveroadImage.image = UIImage.animatedImage(with: imageArray, duration: 0.5)
         moveroadImage.frame = UIScreen.main.bounds
+    
+        
+        //making car image come down
+        let carImage = UIImageView(image: nil)
+
+        carImage.image = UIImage(named: "car1.png")
+        
+        
+        //position a car on the display
+        carImage.frame = CGRect(x:100, y: -300, width: 50, height: 80)
+        self.view.addSubview(carImage)
+        self.view.bringSubview(toFront: carImage)
+        
+        dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
+        dynamicItemBehavior = UIDynamicItemBehavior(items: [carImage])
+        
+        self.dynamicItemBehavior.addLinearVelocity(CGPoint(x: 0, y: 300), for: carImage)
+        dynamicAnimator.addBehavior(dynamicItemBehavior)
+    
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +72,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
 }
+    
+    
+
     
 
 

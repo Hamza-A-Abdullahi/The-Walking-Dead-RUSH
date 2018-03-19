@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car0.png" translatesAutoresizingMaskIntoConstraints="NO" id="DCo-Ht-w01" customClass="DraggingImageView" customModule="CarGame" customModuleProvider="target">
-                                <rect key="frame" x="142" y="497" width="51" height="130"/>
+                                <rect key="frame" x="142" y="497" width="64" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
