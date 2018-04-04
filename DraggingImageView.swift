@@ -9,7 +9,9 @@
 import UIKit
 
 class DraggingImageView: UIImageView {
-
+    
+    var Delegate: subview?
+    
     var startLocation: CGPoint? // define a golble variable
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -23,6 +25,8 @@ class DraggingImageView: UIImageView {
         let dy = currentLocation!.y - startLocation!.y
         
         self.center = CGPoint(x: self.center.x+dx, y: self.center.y+dy)
+        
+        self.Delegate?.changeSomething()
     }
 
     

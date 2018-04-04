@@ -6,22 +6,37 @@
 //  Copyright © 2018 Hamza Abdullahi. All rights reserved.
 //
 
-
 import UIKit
 
-class ViewController: UIViewController {
+protocol subviewDelegate {
+    func colBarrier()
+}
+
+let S_Width = UIScreen.main.bounds.width
+class ViewController: UIViewController, subviewDelegate{
+    var collisionBehavior: UICollisionBehavior!
     var dynamicAnimator: UIDynamicAnimator!
     var dynamicItemBehavior: UIDynamicItemBehavior!
+    var carAnimatation: UIDynamicAnimator!
     
+    @IBOutlet weak var road: DraggingImageView!
+    @IBOutlet weak var draggingCar: DraggingImageView!
     
-    @IBOutlet weak var moveroadImage: UIImageView!
-    
+    var fallingImagesArray = [1, 2,3 ,4, 5, 6, 7, 8, 9, 10]
+    var sWidth =  UIScreen.main.bounds.width
+    var sHeight =  UIScreen.main.bounds.height
+
+    func ranCarsFalling() {
+        collisionBehavior.removeAllBoundaries()
+        collisionBehavior.addBoundary(withIdentifier: "barrier" as
+        NSCopying, for: UIBezierPath(rect: draggingCar.frame))
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        draggingCar.Delegate = self
         
         var imageArray: [UIImage]!
-        
         imageArray = [UIImage(named: "road1.png")!,
                       UIImage(named: "road2.png")!,
                       UIImage(named: "road3.png")!,
@@ -43,30 +58,59 @@ class ViewController: UIViewController {
                       UIImage(named: "road19.png")!,
                       UIImage(named: "road20.png")!]
         
-        moveroadImage.image = UIImage.animatedImage(with: imageArray, duration: 0.5)
-        moveroadImage.frame = UIScreen.main.bounds
-    
-        
-        //making car image come down
-        let carImage = UIImageView(image: nil)
-
-        carImage.image = UIImage(named: "car1.png")
-        
-        
-        //position a car on the display
-        carImage.frame = CGRect(x:100, y: -300, width: 50, height: 80)
-        self.view.addSubview(carImage)
-        self.view.bringSubview(toFront: carImage)
-        
-        dynamicAnimator = UIDynamicAnimator(referenceView: self.view)
-        dynamicItemBehavior = UIDynamicItemBehavior(items: [carImage])
-        
-        self.dynamicItemBehavior.addLinearVelocity(CGPoint(x: 0, y: 300), for: carImage)
-        dynamicAnimator.addBehavior(dynamicItemBehavior)
-    
+        self.view.addSubview(road)
+        self.view.sendSubview(toBack: road)
+        road.image = UIImage.animatedImage(with: imageArray, duration: 0.8)
+        road.frame = UIScreen.main.bounds
+        randCarsFalling()
         
     }
-
+    func randCarsFalling(){
+        dynamicItemBehavior = UIDynamicItemBehavior(items: [])
+        carAnimatation = UIDynamicAnimator(referenceView: self.view)
+        collisionBehavior = UICollisionBehavior(items: [])
+        for index in 0...9 {
+            
+            let setadelay = Double(self.fallingImagesArray[index])
+            let randomnum = (Int(arc4random_uniform(UInt32(UIScreen.main.bounds.width))) + 53)
+            let settimer = DispatchTime.now() + setadelay
+            DispatchQueue.main.asyncAfter(deadline: settimer){
+                
+                let cars = UIImageView(image:nil)
+                let random11 = Int(arc4random_uniform(5))
+                
+                switch random11{
+                case 1: cars.image = UIImage(named: "car1.png")
+                case 2: cars.image = UIImage(named: "car2.png")
+                case 3: cars.image = UIImage(named: "car3.png")
+                case 4: cars.image = UIImage(named: "car4.png")
+                case 5: cars.image = UIImage(named: "car5.png")
+                case 6: cars.image = UIImage(named: "car6.png")
+                default: cars.image = UIImage(named: "planet22.png")
+                }
+        
+                
+                cars.frame = CGRect(x:randomnum, y:0, width:60, height: 60)
+                self.view.addSubview(cars)
+                self.view.bringSubview(toFront: cars)
+                
+                self.dynamicItemBehavior.addItem(cars)
+                self.dynamicItemBehavior.addLinearVelocity(CGPoint(x: 0, y:500), for: cars)
+                self.collisionBehavior.addItem(cars)
+                self.collisionBehavior.translatesReferenceBoundsIntoBoundary = false
+                
+            }
+            
+            carAnimatation.addBehavior(dynamicItemBehavior)
+            self.collisionBehavior.collisionMode = UICollisionBehaviorMode.everything
+            carAnimatation.addBehavior(collisionBehavior)
+            
+        }
+        
+    }
+    
+  
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
