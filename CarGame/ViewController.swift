@@ -9,24 +9,25 @@
 import UIKit
 
 protocol subviewDelegate {
-    func colBarrier()
+    func changeSomething()
 }
 
-let S_Width = UIScreen.main.bounds.width
-class ViewController: UIViewController, subviewDelegate{
+class ViewController: UIViewController, subviewDelegate {
+    
     var collisionBehavior: UICollisionBehavior!
     var dynamicAnimator: UIDynamicAnimator!
     var dynamicItemBehavior: UIDynamicItemBehavior!
     var carAnimatation: UIDynamicAnimator!
     
-    @IBOutlet weak var road: DraggingImageView!
+
+    @IBOutlet weak var road: UIImageView!
     @IBOutlet weak var draggingCar: DraggingImageView!
     
-    var fallingImagesArray = [1, 2,3 ,4, 5, 6, 7, 8, 9, 10]
+    var fallingImagesArray = [0.5,1,1.5,2,2.5,3,3.5,4,4.5, 5, 5.5,6,6.5,7,7.5,8,8.5,9,9.5,10]
     var sWidth =  UIScreen.main.bounds.width
     var sHeight =  UIScreen.main.bounds.height
 
-    func ranCarsFalling() {
+    func changeSomething() {
         collisionBehavior.removeAllBoundaries()
         collisionBehavior.addBoundary(withIdentifier: "barrier" as
         NSCopying, for: UIBezierPath(rect: draggingCar.frame))
@@ -60,7 +61,7 @@ class ViewController: UIViewController, subviewDelegate{
         
         self.view.addSubview(road)
         self.view.sendSubview(toBack: road)
-        road.image = UIImage.animatedImage(with: imageArray, duration: 0.8)
+        road.image = UIImage.animatedImage(with: imageArray, duration: 0.9)
         road.frame = UIScreen.main.bounds
         randCarsFalling()
         
@@ -69,6 +70,8 @@ class ViewController: UIViewController, subviewDelegate{
         dynamicItemBehavior = UIDynamicItemBehavior(items: [])
         carAnimatation = UIDynamicAnimator(referenceView: self.view)
         collisionBehavior = UICollisionBehavior(items: [])
+        
+        
         for index in 0...9 {
             
             let setadelay = Double(self.fallingImagesArray[index])
@@ -77,20 +80,22 @@ class ViewController: UIViewController, subviewDelegate{
             DispatchQueue.main.asyncAfter(deadline: settimer){
                 
                 let cars = UIImageView(image:nil)
-                let random11 = Int(arc4random_uniform(5))
+                let random = Int(arc4random_uniform(5))
                 
-                switch random11{
+                switch random{
                 case 1: cars.image = UIImage(named: "car1.png")
                 case 2: cars.image = UIImage(named: "car2.png")
                 case 3: cars.image = UIImage(named: "car3.png")
                 case 4: cars.image = UIImage(named: "car4.png")
                 case 5: cars.image = UIImage(named: "car5.png")
                 case 6: cars.image = UIImage(named: "car6.png")
-                default: cars.image = UIImage(named: "planet22.png")
+                default: cars.image = UIImage(named: "car1.png")
                 }
-        
                 
-                cars.frame = CGRect(x:randomnum, y:0, width:60, height: 60)
+                
+                
+                
+                cars.frame = CGRect(x:randomnum, y:0, width:45, height: 65)
                 self.view.addSubview(cars)
                 self.view.bringSubview(toFront: cars)
                 

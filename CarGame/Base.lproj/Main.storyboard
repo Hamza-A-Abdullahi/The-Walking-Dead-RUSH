@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="road1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZhZ-oY-TTd" customClass="DraggingImageView" customModule="CarGame" customModuleProvider="target">
-                                <rect key="frame" x="-16" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car0.png" translatesAutoresizingMaskIntoConstraints="NO" id="DCo-Ht-w01" customClass="DraggingImageView" customModule="CarGame" customModuleProvider="target">
                                 <rect key="frame" x="166" y="463" width="64" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R5a-eN-gjW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -32,8 +32,7 @@
                     </view>
                     <connections>
                         <outlet property="draggingCar" destination="DCo-Ht-w01" id="jE2-k8-HZK"/>
-                        <outlet property="moveroadImage" destination="ZhZ-oY-TTd" id="NO1-5F-lxs"/>
-                        <outlet property="road" destination="ZhZ-oY-TTd" id="znk-q9-HcA"/>
+                        <outlet property="road" destination="R5a-eN-gjW" id="6Gh-Cg-TB2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -43,6 +42,5 @@
     </scenes>
     <resources>
         <image name="car0.png" width="382" height="757"/>
-        <image name="road1.png" width="433" height="914"/>
     </resources>
 </document>
