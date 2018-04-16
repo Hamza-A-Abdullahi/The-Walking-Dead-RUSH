@@ -24,12 +24,27 @@ class ViewController: UIViewController, subviewDelegate {
     @IBOutlet weak var road: UIImageView!
     @IBOutlet weak var draggingCar: DraggingImageView!
     
-    var fallingImagesArray = [0.5,1,1.5,2,2.5,3,3.5,4,4.5, 5, 5.5,6,6.5,7,7.5,8,8.5,9,9.5,10]
+    var fallingImagesArray = [0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10,11,12,13,14,15,16,17,18,18.5,19,19.5,20]
     var sWidth =  UIScreen.main.bounds.width
     var sHeight =  UIScreen.main.bounds.height
    
     var Scores: [UIImageView] = []    //array for score
     var score_forGame = 0
+    
+    let gameover = UIImageView(image: nil)
+    let button = UIButton(frame: CGRect(x:200, y:0, width:80, height:50))
+    var allCars: [UIImageView] = []
+
+    @objc func playButton (sender: UIButton!) {
+        gameover.removeFromSuperview()
+        button.removeFromSuperview()
+        score_forGame = 0;
+        
+        for i in allCars{
+            i.removeFromSuperview()
+        }
+        viewDidLoad()
+    }
 
     func changeSomething() {
         collisionBehavior.removeAllBoundaries()
@@ -78,6 +93,7 @@ class ViewController: UIViewController, subviewDelegate {
         road.frame = UIScreen.main.bounds
         randCarsFalling()
         
+        
     }
     func randCarsFalling(){
         dynamicItemBehavior = UIDynamicItemBehavior(items: [])
@@ -85,10 +101,10 @@ class ViewController: UIViewController, subviewDelegate {
         collisionBehavior = UICollisionBehavior(items: [])
         
         
-        for index in 0...9 {
+        for index in 0...19 {
             
             let setadelay = Double(self.fallingImagesArray[index])
-            let randomnum = (Int(arc4random_uniform(UInt32(UIScreen.main.bounds.width))) + 53)
+            let randomnum = (Int(arc4random_uniform(UInt32(243))) + 53)
             let settimer = DispatchTime.now() + setadelay
             DispatchQueue.main.asyncAfter(deadline: settimer){
                 
@@ -107,6 +123,8 @@ class ViewController: UIViewController, subviewDelegate {
                 
     
                 cars.frame = CGRect(x:randomnum, y:0, width:45, height: 65)
+                self.allCars.append(cars)
+                
                 self.view.addSubview(cars)
                 self.view.bringSubview(toFront: cars)
                 
@@ -114,12 +132,12 @@ class ViewController: UIViewController, subviewDelegate {
                 self.dynamicItemBehavior.addLinearVelocity(CGPoint(x: 0, y:500), for: cars)
                 self.collisionBehavior.addItem(cars)
                 self.collisionBehavior.translatesReferenceBoundsIntoBoundary = false
-                self.changeSomething() 
                 
                 self.Scores.append((cars))
                 
                 self.score_forGame = (self.score_forGame + 3)
                 self.scorenumber.text =  String (self.score_forGame)
+               
                 
             }
             
@@ -129,17 +147,39 @@ class ViewController: UIViewController, subviewDelegate {
             
         }
         
-    }
+        let when = DispatchTime.now() + 20
+        
+        DispatchQueue.main.asyncAfter(deadline: when){
+            
+            self.button.backgroundColor = .blue
+            self.button.setTitle("Replay", for: [])
+            self.button.addTarget(self, action: #selector(self.playButton), for: .touchUpInside)
+            self.view.addSubview(self.button)
+            
+            
+            self.gameover.image = UIImage(named: "car1.png")
+            self.gameover.frame = UIScreen.main.bounds
+            self.view.addSubview(self.gameover)
+            self.view.bringSubview(toFront: self.gameover)
+            self.view.bringSubview(toFront: self.button)
+            
+            
+        }
+        
+    
+        
+    
     
   
     
-    override func didReceiveMemoryWarning() {
+func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
 }
+}
+
     
     
 
