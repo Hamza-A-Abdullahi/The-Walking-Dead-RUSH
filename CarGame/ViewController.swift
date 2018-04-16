@@ -14,6 +14,7 @@ protocol subviewDelegate {
 
 class ViewController: UIViewController, subviewDelegate {
     
+    @IBOutlet weak var scorenumber: UILabel!
     var collisionBehavior: UICollisionBehavior!
     var dynamicAnimator: UIDynamicAnimator!
     var dynamicItemBehavior: UIDynamicItemBehavior!
@@ -26,12 +27,24 @@ class ViewController: UIViewController, subviewDelegate {
     var fallingImagesArray = [0.5,1,1.5,2,2.5,3,3.5,4,4.5, 5, 5.5,6,6.5,7,7.5,8,8.5,9,9.5,10]
     var sWidth =  UIScreen.main.bounds.width
     var sHeight =  UIScreen.main.bounds.height
+   
+    var Scores: [UIImageView] = []    //array for score
+    var score_forGame = 0
 
     func changeSomething() {
         collisionBehavior.removeAllBoundaries()
         collisionBehavior.addBoundary(withIdentifier: "barrier" as
         NSCopying, for: UIBezierPath(rect: draggingCar.frame))
+        
+        for car_player in Scores {
+            if (draggingCar.frame.intersects(car_player.frame)){
+               score_forGame = score_forGame - 2
+                self.scorenumber.text = String (self.score_forGame)
+            }
+        }
     }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,9 +105,7 @@ class ViewController: UIViewController, subviewDelegate {
                 default: cars.image = UIImage(named: "car1.png")
                 }
                 
-                
-                
-                
+    
                 cars.frame = CGRect(x:randomnum, y:0, width:45, height: 65)
                 self.view.addSubview(cars)
                 self.view.bringSubview(toFront: cars)
@@ -103,6 +114,11 @@ class ViewController: UIViewController, subviewDelegate {
                 self.dynamicItemBehavior.addLinearVelocity(CGPoint(x: 0, y:500), for: cars)
                 self.collisionBehavior.addItem(cars)
                 self.collisionBehavior.translatesReferenceBoundsIntoBoundary = false
+                
+                self.Scores.append((cars))
+                
+                self.score_forGame = (self.score_forGame + 3)
+                self.scorenumber.text =  String (self.score_forGame)
                 
             }
             
