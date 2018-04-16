@@ -114,6 +114,7 @@ class ViewController: UIViewController, subviewDelegate {
                 self.dynamicItemBehavior.addLinearVelocity(CGPoint(x: 0, y:500), for: cars)
                 self.collisionBehavior.addItem(cars)
                 self.collisionBehavior.translatesReferenceBoundsIntoBoundary = false
+                self.changeSomething() 
                 
                 self.Scores.append((cars))
                 
