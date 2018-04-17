@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DA0D561420444E6000B33F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D561320444E6000B33F41 /* AppDelegate.swift */; };
-		DA0D561620444E6000B33F41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D561520444E6000B33F41 /* ViewController.swift */; };
 		DA0D561920444E6000B33F41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0D561720444E6000B33F41 /* Main.storyboard */; };
 		DA0D561B20444E6000B33F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0D561A20444E6000B33F41 /* Assets.xcassets */; };
 		DA0D561E20444E6000B33F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0D561C20444E6000B33F41 /* LaunchScreen.storyboard */; };
@@ -36,6 +35,7 @@
 		DA0D566A204461D800B33F41 /* road15.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5657204461D700B33F41 /* road15.png */; };
 		DA0D566B204461D800B33F41 /* road16.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5658204461D700B33F41 /* road16.png */; };
 		DA0D566C204461D800B33F41 /* road3.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0D5659204461D800B33F41 /* road3.png */; };
+		DA1579C72086525800B7F084 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D561520444E6000B33F41 /* ViewController.swift */; };
 		DA843E6120600DC300555178 /* car2.png in Resources */ = {isa = PBXBuildFile; fileRef = DA843E5B20600DC200555178 /* car2.png */; };
 		DA843E6220600DC300555178 /* car6.png in Resources */ = {isa = PBXBuildFile; fileRef = DA843E5C20600DC200555178 /* car6.png */; };
 		DA843E6320600DC300555178 /* car3.png in Resources */ = {isa = PBXBuildFile; fileRef = DA843E5D20600DC200555178 /* car3.png */; };
@@ -370,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA0D561620444E6000B33F41 /* ViewController.swift in Sources */,
+				DA1579C72086525800B7F084 /* ViewController.swift in Sources */,
 				DA0D561420444E6000B33F41 /* AppDelegate.swift in Sources */,
 				DA0D56462044540B00B33F41 /* DraggingImageView.swift in Sources */,
 			);
