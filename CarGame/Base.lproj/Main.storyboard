@@ -18,13 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2E-12-cFx">
-                                <rect key="frame" x="117" y="332" width="118" height="75"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gameover.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CIm-oA-DSl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="START "/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5S-3R-YAP">
+                                <rect key="frame" x="88" y="508" width="198" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.42029630829015541" green="0.14708973248539076" blue="0.18469372911232501" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="aoA-zp-iT5"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="dDg-dw-9Jb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -34,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4WL-EA-9EL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-774" y="32"/>
+            <point key="canvasLocation" x="-775.20000000000005" y="31.934032983508249"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -46,7 +52,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R5a-eN-gjW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SCORE" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJo-1D-kGs">
                                 <rect key="frame" x="7" y="26" width="115" height="30"/>
@@ -62,9 +68,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car0.png" translatesAutoresizingMaskIntoConstraints="NO" id="DCo-Ht-w01" customClass="DraggingImageView" customModule="CarGame" customModuleProvider="target">
-                                <rect key="frame" x="163" y="487" width="64" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Zomb1.png" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-ve-IGW" customClass="DraggingImageView" customModule="CarGame" customModuleProvider="target">
+                                <rect key="frame" x="148" y="393" width="57" height="124"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,9 +78,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="FGI-qA-sJ0"/>
                     <connections>
-                        <outlet property="draggingCar" destination="DCo-Ht-w01" id="jE2-k8-HZK"/>
                         <outlet property="road" destination="R5a-eN-gjW" id="6Gh-Cg-TB2"/>
                         <outlet property="scorenumber" destination="tuU-L9-9MM" id="K3U-qs-Xbj"/>
+                        <outlet property="zombie" destination="fcC-ve-IGW" id="Zkf-ot-9wI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -83,6 +89,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car0.png" width="382" height="757"/>
+        <image name="Zomb1.png" width="58" height="93"/>
+        <image name="gameover.jpg" width="640" height="1136"/>
     </resources>
 </document>

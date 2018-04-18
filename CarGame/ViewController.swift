@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol subviewDelegate {
     func changeSomething()
@@ -19,21 +20,27 @@ class ViewController: UIViewController, subviewDelegate {
     var dynamicAnimator: UIDynamicAnimator!
     var dynamicItemBehavior: UIDynamicItemBehavior!
     var carAnimatation: UIDynamicAnimator!
+    var SoundEffect: AVAudioPlayer?
     
-
+    var screenHeight = UIScreen.main.bounds.height
+    var screenWidth = UIScreen.main.bounds.width
+    
+    @IBOutlet weak var zombie: DraggingImageView!
+    
     @IBOutlet weak var road: UIImageView!
-    @IBOutlet weak var draggingCar: DraggingImageView!
+ 
     
     var fallingImagesArray = [1,2,3,4,5,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     var sWidth =  UIScreen.main.bounds.width
     var sHeight =  UIScreen.main.bounds.height
     let label = UILabel(frame: CGRect(x:0, y:0, width: 200,height:200))
+    let labelscore = UILabel(frame: CGRect(x:0, y:25, width: 250,height:200))
 
     var Scores: [UIImageView] = []    //array for score
     var score_forGame = 0
     
     let gameover = UIImageView(image: nil)
-    let button = UIButton(frame: CGRect(x:140, y:100, width:120, height:100))
+    let button = UIButton(frame: CGRect(x:100, y:450, width:120, height:100))
     var allCars: [UIImageView] = []
 
     @objc func playButton (sender: UIButton!) {
@@ -54,10 +61,10 @@ class ViewController: UIViewController, subviewDelegate {
     func changeSomething() {
         collisionBehavior.removeAllBoundaries()
         collisionBehavior.addBoundary(withIdentifier: "barrier" as
-        NSCopying, for: UIBezierPath(rect: draggingCar.frame))
+        NSCopying, for: UIBezierPath(rect: zombie.frame))
         
         for car_player in Scores {
-            if (draggingCar.frame.intersects(car_player.frame)){
+            if (zombie.frame.intersects(car_player.frame)){
                score_forGame = score_forGame - 2
                 self.scorenumber.text = String (self.score_forGame)
             }
@@ -69,7 +76,20 @@ class ViewController: UIViewController, subviewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        draggingCar.Delegate = self
+        
+        func sound(){
+            let path = Bundle.main.path(forResource: "scary.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            do {
+                SoundEffect = try AVAudioPlayer(contentsOf: url)
+                SoundEffect?.play()
+            } catch {
+                // do nothing
+            }
+        }
+       
+        
+        zombie.myDelegate = self
         
         var imageArray: [UIImage]!
         imageArray = [UIImage(named: "road1.png")!,
@@ -98,6 +118,21 @@ class ViewController: UIViewController, subviewDelegate {
         road.image = UIImage.animatedImage(with: imageArray, duration: 0.9)
         road.frame = UIScreen.main.bounds
         randCarsFalling()
+ 
+        var zombieArray: [UIImage]!
+        zombieArray = [UIImage(named: "Zomb1.png")!,
+                      UIImage(named: "Zomb2.png")!,
+                      UIImage(named: "Zomb3.png")!,
+                      UIImage(named: "Zomb4.png")!]
+        
+        sound()
+        
+        
+        self.view.addSubview(road)
+        self.view.sendSubview(toBack: road)
+        zombie.image = UIImage.animatedImage(with: zombieArray, duration: 0.9)
+        zombie.frame = CGRect(x:screenWidth/2, y:screenHeight/1.5, width:70,  height:70)
+        randCarsFalling()
         
         
     }
@@ -118,17 +153,17 @@ class ViewController: UIViewController, subviewDelegate {
                 let random = Int(arc4random_uniform(5))
                 
                 switch random{
-                case 1: cars.image = UIImage(named: "car1.png")
-                case 2: cars.image = UIImage(named: "car2.png")
-                case 3: cars.image = UIImage(named: "car3.png")
-                case 4: cars.image = UIImage(named: "car4.png")
-                case 5: cars.image = UIImage(named: "car5.png")
-                case 6: cars.image = UIImage(named: "car6.png")
-                default: cars.image = UIImage(named: "car1.png")
+                case 1: cars.image = UIImage(named: "item1.png")
+                case 2: cars.image = UIImage(named: "item2.png")
+                case 3: cars.image = UIImage(named: "item3.png")
+                case 4: cars.image = UIImage(named: "item1.png")
+                case 5: cars.image = UIImage(named: "item2.png")
+                case 6: cars.image = UIImage(named: "item3.png")
+                default: cars.image = UIImage(named: "item1.png")
                 }
                 
     
-                cars.frame = CGRect(x:randomnum, y:0, width:45, height: 65)
+                cars.frame = CGRect(x:randomnum, y:0, width:60, height: 66)
                 self.allCars.append(cars)
                 
                 self.view.addSubview(cars)
@@ -157,28 +192,34 @@ class ViewController: UIViewController, subviewDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: when){
             
-            self.button.backgroundColor = .green
-            self.button.setTitleColor(UIColor.black, for: .normal)
+            self.button.backgroundColor = .white
+            self.button.setTitleColor(UIColor.red, for: .normal)
             self.button.setTitle("Play Again", for: [])
             self.button.addTarget(self, action: #selector(self.playButton), for: .touchUpInside)
             self.view.addSubview(self.button)
             
 
-            self.gameover.image = UIImage(named: "road.png")
+            self.gameover.image = UIImage(named: "gameover.jpg")
             self.gameover.frame = UIScreen.main.bounds
             self.view.addSubview(self.gameover)
             self.view.bringSubview(toFront: self.gameover)
             self.view.bringSubview(toFront: self.button)
             
+            
+         
             self.label.center = CGPoint(x:160,y:285)
+            self.label.textColor = UIColor.white
             self.label.textAlignment = .center
-            self.label.text = String(self.score_forGame)
+            self.label.text = "Score " + String(self.score_forGame)
             self.view.addSubview(self.label)
             
             
-            self.label.font = UIFont.systemFont(ofSize: 100.0)
-            self.label.font = UIFont.boldSystemFont(ofSize: 100.0)
-            self.label.font = UIFont.italicSystemFont(ofSize: 100.0)
+            
+            self.label.font = UIFont.systemFont(ofSize: 35.0)
+            self.label.font = UIFont.boldSystemFont(ofSize: 35.0)
+            self.label.font = UIFont.italicSystemFont(ofSize: 35.0)
+            
+           
         }
         
 

@@ -10,7 +10,7 @@ import UIKit
 
 class DraggingImageView: UIImageView {
     
-    var Delegate:subviewDelegate?
+    var myDelegate:subviewDelegate?
     
     var startLocation: CGPoint? // define a golble variable
     
@@ -26,7 +26,7 @@ class DraggingImageView: UIImageView {
         
         self.center = CGPoint(x: self.center.x+dx, y: self.center.y+dy)
         
-        self.Delegate?.changeSomething()
+        self.myDelegate?.changeSomething()
     }
 
     
