@@ -28,7 +28,6 @@
 		DAB941BB2088EA80008EA5B2 /* food6.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB941B52088EA80008EA5B2 /* food6.png */; };
 		DAB941BC2088EA80008EA5B2 /* food5.png in Resources */ = {isa = PBXBuildFile; fileRef = DAB941B62088EA80008EA5B2 /* food5.png */; };
 		DAB941C22088FB6D008EA5B2 /* soundzombie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB941C12088FB6D008EA5B2 /* soundzombie.mp3 */; };
-		DAB941C42088FFF5008EA5B2 /* GameOversound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DAB941C32088FFF5008EA5B2 /* GameOversound.mp3 */; };
 		DAE1DD702086A9A60019FC5F /* Zomb2.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE1DD6C2086A9A50019FC5F /* Zomb2.png */; };
 		DAE1DD712086A9A60019FC5F /* Zomb4.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE1DD6D2086A9A50019FC5F /* Zomb4.png */; };
 		DAE1DD722086A9A60019FC5F /* Zomb3.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE1DD6E2086A9A50019FC5F /* Zomb3.png */; };
@@ -100,7 +99,6 @@
 		DAB941B52088EA80008EA5B2 /* food6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food6.png; sourceTree = "<group>"; };
 		DAB941B62088EA80008EA5B2 /* food5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food5.png; sourceTree = "<group>"; };
 		DAB941C12088FB6D008EA5B2 /* soundzombie.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundzombie.mp3; sourceTree = "<group>"; };
-		DAB941C32088FFF5008EA5B2 /* GameOversound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameOversound.mp3; sourceTree = "<group>"; };
 		DAE1DD6C2086A9A50019FC5F /* Zomb2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Zomb2.png; path = "../../../../Downloads/Hamza pics/Zomb2.png"; sourceTree = "<group>"; };
 		DAE1DD6D2086A9A50019FC5F /* Zomb4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Zomb4.png; path = "../../../../Downloads/Hamza pics/Zomb4.png"; sourceTree = "<group>"; };
 		DAE1DD6E2086A9A50019FC5F /* Zomb3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Zomb3.png; path = "../../../../Downloads/Hamza pics/Zomb3.png"; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 		DA0D561220444E6000B33F41 /* CarGame */ = {
 			isa = PBXGroup;
 			children = (
-				DAB941C32088FFF5008EA5B2 /* GameOversound.mp3 */,
 				DAB941C12088FB6D008EA5B2 /* soundzombie.mp3 */,
 				DAB941B42088EA80008EA5B2 /* food1.png */,
 				DAB941B22088EA7F008EA5B2 /* food2.png */,
@@ -359,7 +356,6 @@
 				DAE1DDCE2086C25F0019FC5F /* road4.png in Resources */,
 				DAE1DDCC2086C25F0019FC5F /* road19.png in Resources */,
 				DAB941B02088E342008EA5B2 /* gameover2.jpg in Resources */,
-				DAB941C42088FFF5008EA5B2 /* GameOversound.mp3 in Resources */,
 				DAE1DDCD2086C25F0019FC5F /* road2.png in Resources */,
 				DAB941AB2088C059008EA5B2 /* item1.png in Resources */,
 				DA713A532088143E002627E3 /* scray.mp3 in Resources */,
