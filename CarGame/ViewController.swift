@@ -12,7 +12,8 @@ import AVFoundation
 protocol subviewDelegate {
     func changeSomething()
 }
-
+var sHeight = UIScreen.main.bounds.height
+var sWidth = UIScreen.main.bounds.width
 class ViewController: UIViewController, subviewDelegate {
     
     @IBOutlet weak var scorenumber: UILabel!
@@ -21,7 +22,8 @@ class ViewController: UIViewController, subviewDelegate {
     var dynamicItemBehavior: UIDynamicItemBehavior!
     var carAnimatation: UIDynamicAnimator!
     var SoundEffect: AVAudioPlayer?
-    
+    var soundzombie: AVAudioPlayer?
+    var soundEffectGO: AVAudioPlayer?
     var screenHeight = UIScreen.main.bounds.height
     var screenWidth = UIScreen.main.bounds.width
     
@@ -31,16 +33,15 @@ class ViewController: UIViewController, subviewDelegate {
  
     
     var fallingImagesArray = [1,2,3,4,5,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    var sWidth =  UIScreen.main.bounds.width
-    var sHeight =  UIScreen.main.bounds.height
-    let label = UILabel(frame: CGRect(x:0, y:0, width: 200,height:200))
-    let labelscore = UILabel(frame: CGRect(x:0, y:25, width: 250,height:200))
+    
+    let label = UILabel(frame: CGRect(x:0, y:0, width: 400,height:200))
+    let labelscore = UILabel(frame: CGRect(x:0, y:25, width: 300,height:200))
 
     var Scores: [UIImageView] = []    //array for score
     var score_forGame = 0
     
     let gameover = UIImageView(image: nil)
-    let button = UIButton(frame: CGRect(x:100, y:450, width:120, height:100))
+    let button = UIButton(frame: CGRect(x:sWidth/2, y:sHeight/1.4, width:120, height:100))
     var allCars: [UIImageView] = []
 
     @objc func playButton (sender: UIButton!) {
@@ -66,6 +67,20 @@ class ViewController: UIViewController, subviewDelegate {
         for car_player in Scores {
             if (zombie.frame.intersects(car_player.frame)){
                score_forGame = score_forGame - 2
+                if score_forGame < 0{
+                    score_forGame = 0
+                    
+                    let path = Bundle.main.path(forResource: "soundzombie.mp3", ofType:nil)!
+                    let url = URL(fileURLWithPath: path)
+                    do{
+                        soundzombie =  try AVAudioPlayer(contentsOf: url)
+                        soundzombie?.play()
+                    }catch{
+                        //no file exist
+                    
+                    }
+                }
+                self.scorenumber.textColor = UIColor.white
                 self.scorenumber.text = String (self.score_forGame)
             }
         }
@@ -78,7 +93,7 @@ class ViewController: UIViewController, subviewDelegate {
         super.viewDidLoad()
         
         func sound(){
-            let path = Bundle.main.path(forResource: "scary.mp3", ofType:nil)!
+            let path = Bundle.main.path(forResource: "scray.mp3", ofType:nil)!
             let url = URL(fileURLWithPath: path)
             do {
                 SoundEffect = try AVAudioPlayer(contentsOf: url)
@@ -115,23 +130,25 @@ class ViewController: UIViewController, subviewDelegate {
         
         self.view.addSubview(road)
         self.view.sendSubview(toBack: road)
-        road.image = UIImage.animatedImage(with: imageArray, duration: 0.9)
+        road.image = UIImage.animatedImage(with: imageArray, duration: 0.4)
         road.frame = UIScreen.main.bounds
         randCarsFalling()
  
         var zombieArray: [UIImage]!
-        zombieArray = [UIImage(named: "Zomb1.png")!,
-                      UIImage(named: "Zomb2.png")!,
-                      UIImage(named: "Zomb3.png")!,
-                      UIImage(named: "Zomb4.png")!]
+        zombieArray = [UIImage(named: "food1.png")!,
+                      UIImage(named: "food2.png")!,
+                      UIImage(named: "food3.png")!,
+                      UIImage(named: "food4.png")!,
+                      UIImage(named: "food5.png")!,
+                      UIImage(named: "food6.png")!,]
         
         sound()
         
         
         self.view.addSubview(road)
         self.view.sendSubview(toBack: road)
-        zombie.image = UIImage.animatedImage(with: zombieArray, duration: 0.9)
-        zombie.frame = CGRect(x:screenWidth/2, y:screenHeight/1.5, width:70,  height:70)
+        zombie.image = UIImage.animatedImage(with: zombieArray, duration: 0.4)
+        zombie.frame = CGRect(x:screenWidth/2, y:screenHeight/1.5, width:96,  height:96)
         randCarsFalling()
         
         
@@ -153,17 +170,18 @@ class ViewController: UIViewController, subviewDelegate {
                 let random = Int(arc4random_uniform(5))
                 
                 switch random{
-                case 1: cars.image = UIImage(named: "item1.png")
-                case 2: cars.image = UIImage(named: "item2.png")
-                case 3: cars.image = UIImage(named: "item3.png")
-                case 4: cars.image = UIImage(named: "item1.png")
-                case 5: cars.image = UIImage(named: "item2.png")
-                case 6: cars.image = UIImage(named: "item3.png")
-                default: cars.image = UIImage(named: "item1.png")
+                case 1: cars.image = UIImage(named: "zomb1.png")
+                case 2: cars.image = UIImage(named: "zomb1.png")
+                case 3: cars.image = UIImage(named: "zomb1.png")
+                case 4: cars.image = UIImage(named: "zomb1.png")
+                case 5: cars.image = UIImage(named: "zomb1.png")
+                case 6: cars.image = UIImage(named: "zomb1.png")
+                default: cars.image = UIImage(named: "zomb1.png")
+                    
                 }
                 
     
-                cars.frame = CGRect(x:randomnum, y:0, width:60, height: 66)
+                cars.frame = CGRect(x:randomnum, y:0, width:55, height: 55)
                 self.allCars.append(cars)
                 
                 self.view.addSubview(cars)
@@ -192,14 +210,14 @@ class ViewController: UIViewController, subviewDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: when){
             
-            self.button.backgroundColor = .white
-            self.button.setTitleColor(UIColor.red, for: .normal)
+    
+            self.button.setTitleColor(UIColor.white, for: .normal)
             self.button.setTitle("Play Again", for: [])
             self.button.addTarget(self, action: #selector(self.playButton), for: .touchUpInside)
             self.view.addSubview(self.button)
             
 
-            self.gameover.image = UIImage(named: "gameover.jpg")
+            self.gameover.image = UIImage(named: "gameover2.jpg")
             self.gameover.frame = UIScreen.main.bounds
             self.view.addSubview(self.gameover)
             self.view.bringSubview(toFront: self.gameover)
@@ -207,7 +225,7 @@ class ViewController: UIViewController, subviewDelegate {
             
             
          
-            self.label.center = CGPoint(x:160,y:285)
+            self.label.center = CGPoint(x:self.screenWidth/2,y:self.screenHeight/4.3)
             self.label.textColor = UIColor.white
             self.label.textAlignment = .center
             self.label.text = "Score " + String(self.score_forGame)
@@ -215,21 +233,21 @@ class ViewController: UIViewController, subviewDelegate {
             
             
             
-            self.label.font = UIFont.systemFont(ofSize: 35.0)
-            self.label.font = UIFont.boldSystemFont(ofSize: 35.0)
-            self.label.font = UIFont.italicSystemFont(ofSize: 35.0)
-            
-           
-        }
-        
+            self.label.font = UIFont.systemFont(ofSize: 45.0)
+            self.label.font = UIFont.boldSystemFont(ofSize: 45.0)
+            self.label.font = UIFont.italicSystemFont(ofSize: 45.0)
+            }
+    
+    }
 
-func didReceiveMemoryWarning() {
+        
+override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 }
-}
+
 
     
     
